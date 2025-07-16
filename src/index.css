@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VibeS Design System - Academic productivity platform for university students */
+
+@layer base {
+  :root {
+    /* Core brand colors */
+    --primary: 248 85% 70%; /* Violet blue #6C63FF */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 248 85% 65%;
+    --primary-glow: 248 85% 80%;
+    
+    /* Accent colors */
+    --accent: 38 94% 56%; /* Amber #F9A826 */
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 38 94% 95%;
+    
+    /* Success and error states */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Neutral grays */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --muted: 220 13% 96%;
+    --muted-foreground: 220 9% 46%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 248 85% 70%;
+    
+    /* Card and surface colors */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Secondary elements */
+    --secondary: 220 13% 96%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(248 85% 70%), hsl(248 85% 80%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 13% 98%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 13% 99%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(220 13% 69% / 0.1), 0 2px 4px -1px hsl(220 13% 69% / 0.06);
+    --shadow-medium: 0 10px 15px -3px hsl(220 13% 69% / 0.1), 0 4px 6px -2px hsl(220 13% 69% / 0.05);
+    --shadow-large: 0 25px 50px -12px hsl(220 13% 69% / 0.25);
+    --shadow-glow: 0 0 20px hsl(248 85% 70% / 0.3);
+    
+    /* Animations */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Core brand colors - darker theme */
+    --primary: 248 85% 70%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 248 85% 75%;
+    --primary-glow: 248 85% 85%;
+    
+    /* Accent colors */
+    --accent: 38 94% 56%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 38 94% 15%;
+    
+    /* Success and error states */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Neutral grays - dark theme */
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 248 85% 70%;
+    
+    /* Card and surface colors */
+    --card: 222 47% 4%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 4%;
+    --popover-foreground: 210 40% 98%;
+    
+    /* Secondary elements */
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    
+    /* Gradients - dark theme */
+    --gradient-primary: linear-gradient(135deg, hsl(248 85% 70%), hsl(248 85% 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(222 47% 4%), hsl(217 33% 6%));
+    --gradient-card: linear-gradient(145deg, hsl(222 47% 4%), hsl(217 33% 8%));
+    
+    /* Shadows - adjusted for dark theme */
+    --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+    --shadow-large: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 20px hsl(248 85% 70% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
